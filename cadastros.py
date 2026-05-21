@@ -24,14 +24,27 @@ def cadastrar_usuario():
             usuarios = arquivo.readlines()
     except FileNotFoundError:
         usuarios = []
-    for linha in usuarios:
-        dados = linha.strip().split(';')
-        if len(dados) > 1 and dados[1] == email:
-            print('Email já cadastrado!')
-            return
 
+    while True:
+        email = input('Email: ')
+        if not validar_email(email):
+            print('Email inválido, tente novamente.')
+            continue
+
+        email_duplicado = False
+        
+        for linha in usuarios:
+            dados = linha.strip().split(';')
+            if len(dados) > 1 and dados[1] == email:
+                print('Email já cadastrado, tente novamente.')
+
+            email_duplicado = True
+            break
+
+        if not email_duplicado:
+            break        
 
     with open('usuarios.txt', 'a') as arquivo:
         arquivo.write(f'{nome};{email}\n')
 
-    print('Usuário cadastrado com sucesso!')
+print('Usuário cadastrado com sucesso!')
