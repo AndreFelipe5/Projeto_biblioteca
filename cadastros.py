@@ -7,18 +7,18 @@ def validar_email(email):
 
 
 def cadastrar_usuario():
+    print('Cadastro de Usuário')
     nome = input('Nome: ')
    
    
     while True:
         email = input('Email: ')
         if validar_email(email):
-            print('Email válido!')
             break
         else:
             print('inválido, tente novamente.')
+        
 
-   
     try:
         with open('usuarios.txt', 'r') as arquivo:
             usuarios = arquivo.readlines()
