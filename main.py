@@ -1,6 +1,6 @@
-import cadastros
-
-
+import cadastro_users
+import cadastro_livros
+import emprestimo_livros
 
 def menu():
     while True:
@@ -16,13 +16,13 @@ def menu():
         menu_opcoes = input('Digite a opção desejada: ')
 
         if menu_opcoes == '1':
-             cadastros.cadastrar_usuario()
+             cadastro_users.cadastrar_usuario()
 
         elif menu_opcoes == '2':    
-             cadastrar_livro()
+              cadastro_livros.cadastrar_livro()
 
         elif menu_opcoes == '3':
-             emprestimo_livros()
+             emprestimo_livros.emprestimo_livros()
 
         elif menu_opcoes == '4':
             devolucao_livros()
