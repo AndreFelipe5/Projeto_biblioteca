@@ -18,6 +18,7 @@ def cadastrar_livro():
             break
 
     if not livro_duplicado:
-        with open('livros.txt', 'a') as arquivo:
-            arquivo.write(f'{titulo}\n')
-            print('Livro cadastrado com sucesso!')
+        numero = len(livros) + 1  
+        with open('livros.txt', 'a') as arquivo: 
+            arquivo.write(f'{numero} - {titulo}\n')
+        print('Livro cadastrado com sucesso!')
