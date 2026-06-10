@@ -45,18 +45,18 @@ Conceitos Aplicados
 Estrutura do Projeto
 
 BibliotecaLP/
-│
-├── menu.py
-├── cadastro_users.py
-├── cadastro_livros.py
-├── editar_livros.py
-├── emprestimo_livros.py
-├── devolucao_livros.py
-├── relatorio.py
-│
-├── usuarios.txt
-├── livros.txt
-└── emprestados.txt
+|
+|--- menu.py
+|--- cadastro_users.py
+|--- cadastro_livros.py
+|--- editar_livros.py
+|--- emprestimo_livros.py
+|--- devolucao_livros.py
+|--- relatorio.py
+|
+|--- usuarios.txt
+|--- livros.txt
+|--- emprestados.txt
 
 Como Executar
 
