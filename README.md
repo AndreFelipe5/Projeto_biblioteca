@@ -98,8 +98,7 @@ Este projeto foi desenvolvido com o objetivo de aplicar os conhecimentos adquiri
 - Excluir livros do sistema
 - Registrar o usuário responsável pelo empréstimo
 - Registrar data de empréstimo e devolução
-- Pesquisa de livros por nome
-- Migração para banco de dados SQLite
+- Pesquisa de livros por nomes
 - Desenvolvimento de interface gráfica
 
 ## Autor
