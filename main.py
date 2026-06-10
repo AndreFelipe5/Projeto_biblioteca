@@ -1,10 +1,12 @@
 import cadastro_users
 import cadastro_livros
 import emprestimo_livros
+import devolucao_livros
+import relatorio
 
 def menu():
     while True:
-        print('Biblioteca')
+        print('Biblioteca LP')
 
         print(' 1 - Cadastrar Usuário')
         print(' 2 - Cadastrar Livro')
@@ -25,10 +27,10 @@ def menu():
              emprestimo_livros.emprestimo_livros()
 
         elif menu_opcoes == '4':
-            devolucao_livros()
+            devolucao_livros.devolver_livro()
 
         elif menu_opcoes == '5':
-            relatorio_biblioteca()
+            relatorio.relatorio_biblioteca()
 
         elif menu_opcoes == '6':
             print('saindo...')
