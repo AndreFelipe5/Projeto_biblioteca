@@ -36,7 +36,6 @@ As informações são armazenadas em arquivos `.txt`, permitindo a persistência
 - Estruturas condicionais (`if`, `elif`, `else`)
 - Estruturas de repetição (`while` e `for`)
 - Funções
-- Módulos
 - Manipulação de arquivos TXT
 - Listas
 - `enumerate()`
