@@ -11,7 +11,7 @@ def cadastrar_livro():
     livro_duplicado = False
         
     for linha in livros:
-        dados = linha.strip().split(';')
+        dados = linha.strip().split(' ')
         if titulo in dados:
             print('Livro já cadastrado, tente novamente.')
             livro_duplicado = True
