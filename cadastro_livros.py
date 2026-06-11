@@ -1,9 +1,9 @@
 
 
 def cadastrar_livro():
-    print('Cadastro de Livros')
-    titulo = input('Título do livro: ')
+    print('\n--------> Cadastro de Livros <--------')
 
+    titulo = input('\nTítulo do livro: ')
 
     with open('livros.txt', 'r') as arquivo:
        livros = arquivo.readlines()
