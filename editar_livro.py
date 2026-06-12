@@ -1,35 +1,39 @@
 def editar_livros():
-    print("Editar Livros\n")
+    print("\n--------> Editar Livros <--------")
 
     with open("livros.txt", "r") as arquivo:
         livros = [linha.strip() for linha in arquivo]
 
     if len(livros) == 0:
-        print('Nenhum Livro encontrado')
+        print("\nNenhum Livro Disponivel\n")
         return
-        
-    print('\n Livros Cadastrados')
+
+    print("\nLivros Cadastrados:\n")
 
     for i, livro in enumerate(livros, start=1):
-        print(f'{i} - {livro}')
+        print(f"{i} - {livro}")
 
-    editar_livro = int(input('Digite o número do livro para Edita-lo: '))
+    while True:
 
-    if 1 <= editar_livro <= len(livros):
+        editar_livro = input("\nDigite o número do livro para Edita-lo: ")
 
-        novo_nome = input("Digite o nome nome do Livro: ")
+        if editar_livro.isdigit():
+            editar_livro = int(editar_livro)
 
-        livros[editar_livro - 1] = novo_nome
+            if 1 <= editar_livro <= len(livros):
+                break
+            else:
+                print("Livro não encontrado, Escolha um número da lista")
 
-        with open("livros.txt", "w") as arquivo:
-            for livro in livros:
-                arquivo.write(f'{livro}\n')
+        else:
+            print("Digite apenas números.")
 
-        print('Livro atualizado com sucesso!')  
+    novo_nome = input("\nDigite o Novo nome do Livro: ")
 
-    else:
-        print('Livro não encontrado.')
-        return
+    livros[editar_livro - 1] = novo_nome
 
+    with open("livros.txt", "w") as arquivo:
+        for livro in livros:
+            arquivo.write(f"{livro}\n")
 
-    
+    print("\nLivro atualizado com sucesso!\n")

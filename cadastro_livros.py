@@ -3,21 +3,18 @@
 def cadastrar_livro():
     print('\n--------> Cadastro de Livros <--------')
 
-    titulo = input('\nTítulo do livro: ')
-
     with open('livros.txt', 'r') as arquivo:
-       livros = arquivo.readlines()
+       livros = [linha.strip().lower() for linha in arquivo]
 
-    livro_duplicado = False
-        
-    for linha in livros:
-        dados = linha.strip().split(' ')
-        if titulo in dados:
-            print('Livro já cadastrado, tente novamente.')
-            livro_duplicado = True
+    while True:
+
+        titulo = input('\nTítulo do livro: ').strip()
+
+        if titulo.lower() in livros:
+            print(f'o Livro {titulo} já está cadastrado, tente novamente.' )
+
+        else:
+            with open("livros.txt", "a") as arquivo:
+                arquivo.write(f'{titulo}\n')
+            print(f'\nO Livro {titulo} foi cadastrado com sucesso!\n')
             break
-
-    if not livro_duplicado:
-        with open('livros.txt', 'a') as arquivo: 
-            arquivo.write(titulo +'\n')
-        print('Livro cadastrado com sucesso!')

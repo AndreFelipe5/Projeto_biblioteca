@@ -9,7 +9,7 @@ import editar_livro
 def menu():
     while True:
         
-        print('=====> Biblioteca LP <=====>\n')
+        print('<=====> Biblioteca LP <=====>\n')
        
         print(' 1 - Cadastrar Livro')
         print(' 2 - Editar Livros')
