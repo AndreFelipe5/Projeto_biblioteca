@@ -13,7 +13,7 @@ def emprestimo_livros():
     for i, livro in enumerate(livros, start=1):
         titulo, autor = livro.split(";")
         print(f"{i} - Titulo: {titulo}")
-        print(f" Autor: {autor}")
+        print(f" Autor: {autor}\n")
 
     while True:
 

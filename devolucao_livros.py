@@ -7,11 +7,13 @@ def devolver_livro():
     print("Lista de Livros:\n ")
 
     for i, livro in enumerate(livros_emprestados, start=1):
-        print(f"{i} - {livro}")
+        titulo, autor = livro.split(";")
+        print(f'{i} - Titulo: {titulo}')
+        print(f' Autor: {autor}\n')
 
     while True:
 
-        livro_escolhido = input("\nQual o número do Livro deseja devolver? ")
+        livro_escolhido = input('\nQual o número do Livro deseja devolver? ')
         if livro_escolhido.isdigit():
             livro_escolhido = int(livro_escolhido)
 
@@ -19,18 +21,21 @@ def devolver_livro():
                 break
 
             else:
-                print("Opção inválida, Escolha um número dos livros listados")
+                print('Opção inválida, Escolha um número dos livros listados')
         else:
-            print("Digite apenas Números.")
+            print('Digite apenas Números.')
 
     livro_devolvido = livros_emprestados.pop(livro_escolhido - 1)
 
+    titulo, autor = livro_devolvido.split(';')
+
     with open("livros_emprestado.txt", "w") as arquivo:
         for livro in livros_emprestados:
-              arquivo.write(f"{livro}\n")
+              arquivo.write(f'{livro}\n')
 
     with open("livros.txt", "a") as arquivo:
-                arquivo.write(f"{livro_devolvido}\n")
+                arquivo.write(f'{livro_devolvido}\n')
 
-    print(f"\nO livro escolhido foi: {livro_devolvido}")
-    print("Devolvido com sucesso!\n")
+    print(f'\nO livro escolhido foi: {titulo}')
+    print(f'do Autor: {autor}\n')
+    print('Devolvido com sucesso!\n')

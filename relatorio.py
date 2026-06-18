@@ -17,6 +17,7 @@ def relatorio_biblioteca():
         for i, livro in enumerate(livros, start=1):
             titulo,autor = livro.split(';')
             print(f'Titulo: {titulo}\n Autor: {autor}\n')
+            
     print(f"\nTotal de Livros Disponíveis: {len(livros)}\n")
 
     print("---> Livros Emprestados <---\n")
