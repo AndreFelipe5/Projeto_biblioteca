@@ -12,7 +12,6 @@ def devolver_livro():
     while True:
 
         livro_escolhido = input("\nQual o número do Livro deseja devolver? ")
-
         if livro_escolhido.isdigit():
             livro_escolhido = int(livro_escolhido)
 

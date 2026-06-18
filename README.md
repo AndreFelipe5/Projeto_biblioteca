@@ -10,10 +10,6 @@ As informações são armazenadas em arquivos `.txt`, permitindo a persistência
 
 ## Funcionalidades
 
-### Usuários
-
-- Cadastro de usuários
-
 ### Livros
 
 - Cadastro de livros
@@ -93,8 +89,8 @@ Este projeto foi desenvolvido com o objetivo de aplicar os conhecimentos adquiri
 
 ## Melhorias Futuras
 
-- Editar usuários cadastrados
-- Excluir livros do sistema
+- Criar usuários para emprestimos de livros
+- Excluir livros
 - Registrar o usuário responsável pelo empréstimo
 - Registrar data de empréstimo e devolução
 - Pesquisa de livros por nomes
