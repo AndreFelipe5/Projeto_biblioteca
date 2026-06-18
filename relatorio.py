@@ -16,7 +16,8 @@ def relatorio_biblioteca():
     else:
         for i, livro in enumerate(livros, start=1):
             titulo,autor = livro.split(';')
-            print(f'Titulo: {titulo}\n Autor: {autor}\n')
+            print(f'{i} - Titulo: {titulo}')
+            print(f' Autor: {autor}\n')
             
     print(f"\nTotal de Livros Disponíveis: {len(livros)}\n")
 
@@ -27,7 +28,9 @@ def relatorio_biblioteca():
 
     else:
         for i, livro in enumerate(livros_emprestados, start=1):
-            print(f"{i} - {livro}")
+            titulo,autor = livro.split(';')
+            print(f'{i} - Titulo: {titulo}')
+            print(f' Autor: {autor}\n')
 
     print(f"Total de livros emprestados: {len(livros_emprestados)}")
 
