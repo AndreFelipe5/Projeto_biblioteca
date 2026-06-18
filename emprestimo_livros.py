@@ -11,7 +11,9 @@ def emprestimo_livros():
     print("Lista de Livros disponíveis para Empréstimo:\n")
 
     for i, livro in enumerate(livros, start=1):
-        print((f"{i} - {livro}"))
+        titulo, autor = livro.split(";")
+        print(f"{i} - Titulo: {titulo}")
+        print(f" Autor: {autor}")
 
     while True:
 
@@ -30,12 +32,15 @@ def emprestimo_livros():
 
     livro_emprestado = livros.pop(livro_escolhido - 1)
 
+    titulo, autor = livro_emprestado.split(";")
+
     with open("livros.txt", "w") as arquivo:
         for livro in livros:
-                arquivo.write(livro + "\n")
+            arquivo.write(livro + "\n")
 
     with open("livros_emprestado.txt", "a") as arquivo:
         arquivo.write(livro_emprestado + "\n")
 
-    print(f"\nO livro escolhido foi: {livro_emprestado}")
+    print(f"\nO livro escolhido foi: {titulo}")
+    print(f"Do Autor: {autor}\n")
     print("Livro emprestado com sucesso!\n")
