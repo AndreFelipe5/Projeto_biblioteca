@@ -98,10 +98,11 @@ Este projeto foi desenvolvido com o objetivo de aplicar os conhecimentos adquiri
 - Descrição dos Livros
 - Valores para emprestimo, Data e Devolução
 
-### Melhorias em atualização
+### Melhorias e correções (atualizando)
 
 - Autores [OK]
-- Nomes de Livros e Autores em branco []
+- Nomes de Livros e Autores em branco [em processo...]
+
 
 ## Autor
 
