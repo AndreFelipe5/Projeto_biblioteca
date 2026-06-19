@@ -101,7 +101,8 @@ Este projeto foi desenvolvido com o objetivo de aplicar os conhecimentos adquiri
 ### Melhorias e correções (atualizando)
 
 - Autores [OK]
-- Nomes de Livros e Autores em branco [em processo...]
+- Nomes de Livros e Autores em branco [OK]
+- Opção para retornar ao Menu (ex: cancelar cadastro de livro)[em andamento...]
 
 
 ## Autor

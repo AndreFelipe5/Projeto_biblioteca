@@ -3,3 +3,7 @@ Auto da Compadecida;Ariano Suassuna
 Matematica Aplicada Nv. Deus;
 ;
 Não Devo nada a Ninguem;Conde só Brega
+;
+;
+Oi Mundo;Hello world
+0;0
